@@ -26,8 +26,8 @@ namespace Cadena.Engine.CyclicReceivers.Timelines
 
         private readonly List<ListParameter> _targetLists = new List<ListParameter>();
 
-        // normally allows 180 access / 15 min => 5sec intv.
-        protected override long MinimumIntervalTicks => TimeSpan.FromSeconds(5).Ticks;
+        // normally allows 900 access / 15 min => 1sec interval.
+        protected override long MinimumIntervalTicks => TimeSpan.FromSeconds(1).Ticks;
 
         public ListReceiver([NotNull] IApiAccessor accessor, [NotNull] Action<TwitterStatus> handler,
             [CanBeNull] Action<Exception> exceptionHandler, int receiveCount = 100, bool includeRetweets = false)
