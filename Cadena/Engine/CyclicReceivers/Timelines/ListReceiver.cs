@@ -15,7 +15,7 @@ namespace Cadena.Engine.CyclicReceivers.Timelines
         /// <summary>
         /// Access interval (per list)
         /// </summary>
-        private const int BaseAccessIntervalSec = 30;
+        public static int BaseAccessIntervalSec = 30;
 
         private readonly IApiAccessor _accessor;
         private readonly Action<TwitterStatus> _handler;
